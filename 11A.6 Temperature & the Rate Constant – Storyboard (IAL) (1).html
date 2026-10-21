@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>11A.6 Temperature &amp; the Rate Constant – Storyboard</title>
+<style>
+:root{--bg:#fbf8f3;--fg:#1d2433;--card:#fff;--mut:#5b6475;--ln:#e3ddd2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171f;--fg:#eceef4;--card:#1e2330;--mut:#a3abbd;--ln:#323a4d}}
+:root[data-theme="dark"]{--bg:#14171f;--fg:#eceef4;--card:#1e2330;--mut:#a3abbd;--ln:#323a4d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
+.w{max-width:980px;margin:auto;padding:16px}
+header{background:linear-gradient(120deg,#d62828,#f47321 55%,#8e44ad);color:#fff;border-radius:16px;padding:18px 20px}
+h1{margin:0;font-size:1.45rem}.by{margin:4px 0;font-weight:700;font-size:1.05rem}header q{display:block;opacity:.95;font-style:italic}
+#nav{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+#nav button{flex:1 1 140px;border:0;border-bottom:5px solid var(--c);background:var(--card);color:var(--fg);border-radius:10px;padding:8px;cursor:pointer;font:inherit;font-size:.85rem}
+.sc{background:var(--card);border-radius:16px;margin:14px 0;padding:14px;border-left:8px solid var(--c)}
+.sc h2{margin:0 0 4px;color:var(--c);font-size:1.2rem}.sc h2 i{background:var(--c);color:#fff;border-radius:50%;padding:0 9px;margin-right:6px;font-style:normal}
+.story{font-style:italic;color:var(--mut);margin:2px 0 10px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+.k{background:var(--bg);border-radius:10px;padding:8px 10px;border-top:4px solid var(--c);animation:up .5s both}.k b{display:block}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.key{background:#fff3c4;color:#4a3b00;border-radius:10px;padding:8px 12px;margin:10px 0;font-weight:600}
+canvas{width:100%;max-width:640px;display:block;background:var(--bg);border-radius:8px}
+input[type=range]{width:min(100%,300px);vertical-align:middle}label{display:inline-block;margin:2px 10px 2px 0;font-size:.9rem}
+.out{font-weight:700;color:var(--c);margin:4px 0}
+button.b,button.o{background:var(--c,#d62828);color:#fff;border:0;border-radius:8px;padding:6px 12px;margin:4px 6px 0 0;cursor:pointer;font:inherit}
+button.o{display:block;background:var(--bg);color:var(--fg);border:2px solid var(--ln);text-align:left;width:100%;margin:5px 0}button.o.ok{border-color:#1aa37a;background:#1aa37a33}button.o.no{border-color:#d62828;background:#d6282833}
+.q{border:1px solid var(--ln);border-radius:12px;padding:10px;margin:10px 0;--c:#d62828}.st{background:var(--bg);border-left:4px solid var(--c);padding:4px 8px;margin:5px 0;border-radius:4px;animation:up .4s}.fb{font-weight:600;margin:4px 0}
+.bar{height:22px;border-radius:6px;color:#fff;padding:0 8px;margin:4px 0;transition:width .6s;white-space:nowrap}
+input[type=number]{width:110px;padding:5px;border-radius:6px;border:2px solid var(--ln);background:var(--bg);color:var(--fg);font:inherit}
+</style></head><body><div class="w">
+<header><h1>🌡️ 11A.6 Effect of Temperature on the Rate Constant</h1><p class="by">Made by Aasia Khawar</p><q>Every reaction needs a push over the hill. Heat is that push – and today you’ll see exactly how it works.</q><small>Edexcel IAL Chemistry · Paper 4 · Spec 11.10 · Questions solved: <b id="pg">0 / 8</b></small></header>
+<div id="nav"></div>
+
+<section class="sc" id="s1" style="--c:#e6007e"><h2><i>1</i>🏔️ The hill every reaction must climb</h2><p class="story">Scene 1 – Two particles meet. Do they react? Only if they arrive with enough energy.</p>
+<div class="g"><div class="k"><b>Activation energy, Eₐ</b>The minimum energy colliding particles need so that the reaction can happen – the height of the hill.</div><div class="k"><b>Two things must be true</b>① energy ≥ Eₐ ② correct orientation. Orientation is hidden inside the factor A.</div><div class="k"><b>Picture it</b>Pushing a ball over a hill: a gentle push rolls back; a hard push gets over and releases energy on the way down.</div></div>
+<div class="key">🎯 Question for the next scenes: what does heating change – the hill, or the pushes?</div></section>
+
+<section class="sc" id="s2" style="--c:#f47321"><h2><i>2</i>🔥 Heating gives more molecules a hard enough push</h2><p class="story">Scene 2 – The Maxwell–Boltzmann curve (schematic). Drag temperature up and watch the orange tail beyond Eₐ grow.</p>
+<label>Temperature <input type="range" id="sT" min="250" max="600" value="300"></label><label>Eₐ <input type="range" id="sE" min="20" max="100" value="50"></label>
+<canvas id="c2" width="640" height="230"></canvas><div class="out" id="o2"></div>
+<div class="g"><div class="k"><b>Major effect ✔</b>Fraction of molecules with E ≥ Eₐ rises sharply with T.</div><div class="k"><b>Minor effect ✘</b>Collisions get a little more frequent – tiny compared with the first effect, so ignore it.</div></div></section>
+
+<section class="sc" id="s3" style="--c:#2b5aa8"><h2><i>3</i>🧩 Decode the Arrhenius equation</h2><p class="story">Scene 3 – One equation, four characters. Play with the numbers.</p>
+<div class="key" style="font-size:1.2rem">k = A e<sup>−Eₐ/RT</sup></div>
+<div class="g"><div class="k"><b>A</b>Pre-exponential factor: collision rate and orientation.</div><div class="k"><b>e<sup>−Eₐ/RT</sup></b>Fraction of collisions with E ≥ Eₐ.</div><div class="k"><b>R, T</b>R = 8.31 J mol⁻¹ K⁻¹. T in kelvin. Eₐ in joules!</div></div>
+<p><label>T (K) <input type="range" id="aT" min="250" max="600" value="298"></label><label>Eₐ (kJ mol⁻¹) <input type="range" id="aE" min="10" max="120" value="60"></label></p>
+<div class="out" id="o3"></div><p class="story">Textbook check: Eₐ = 60 kJ mol⁻¹ at 298 K gives 3 × 10⁻¹¹ – only 1 collision in 3 × 10¹¹ reacts.</p>
+<div class="key">🧠 T↑ → Eₐ/RT↓ → exponent less negative → e<sup>−Eₐ/RT</sup>↑ → k↑ → rate↑</div></section>
+
+<section class="sc" id="s4" style="--c:#1aa37a"><h2><i>4</i>📉 Turn the curve into a straight line</h2><p class="story">Scene 4 – Take natural logs: ln k = −(Eₐ/R)(1/T) + ln A. It’s y = mx + c! Watch the data from the worked example appear.</p>
+<canvas id="c4" width="640" height="230"></canvas><label><input type="checkbox" id="tri" checked> show gradient triangle</label>
+<div class="g"><div class="k"><b>Gradient</b>= −Eₐ/R = (−3.50 − −5.27) ÷ (0.00294 − 0.00333) = −4538 K</div><div class="k"><b>Eₐ</b>= 4538 × 8.31 = 37 700 J mol⁻¹ = <b>+37.7 kJ mol⁻¹</b></div><div class="k"><b>Intercept</b>on the vertical axis = ln A</div></div>
+<div class="key">⚠️ Plot ln k (y) against 1/T (x). The line slopes DOWN because the gradient is −Eₐ/R. Assumes Eₐ and A stay constant over the range.</div></section>
+
+<section class="sc" id="s5" style="--c:#8e44ad"><h2><i>5</i>🗺️ Reading reaction profiles</h2><p class="story">Scene 5 – Choose a mechanism and follow the ball.</p>
+<button class="b" onclick="mech=2">SN2 (primary)</button><button class="b" onclick="mech=1">SN1 (tertiary)</button>
+<canvas id="c5" width="640" height="230"></canvas><div class="out" id="o5"></div>
+<div class="g"><div class="k"><b>Transition state</b>Energy MAXIMUM, lasts ~10⁻¹⁵ s, not a real species.</div><div class="k"><b>Intermediate</b>Energy MINIMUM (e.g. carbocation R₃C⁺), exists for a finite time.</div><div class="k"><b>RDS = highest hump</b>SN1 tertiary: step 1 is slow so Eₐ(1) &gt; Eₐ(2). If step 2 were rate-determining, Eₐ(1) &lt; Eₐ(2).</div></div></section>
+
+<section class="sc" id="s6" style="--c:#d62828"><h2><i>6</i>🧪 Structure decides the route</h2><p class="story">Scene 6 – Alkyl groups push electrons (inductive effect), so tertiary carbocations are the most stable. Pick a halogenoalkane.</p>
+<button class="b" onclick="pk6(0)">1° primary</button><button class="b" onclick="pk6(1)">2° secondary</button><button class="b" onclick="pk6(2)">3° tertiary</button>
+<div id="o6"></div>
+<div class="key">SN1: stable carbocation → lower Eₐ → rate 1° &lt; 2° &lt; 3°. SN2: crowded 5-group transition state → higher Eₐ → rate 3° &lt; 2° &lt; 1°. Secondary: a mixture of both.</div>
+<div class="key">📌 Learning tip: large Eₐ = slow reaction, but rate rises rapidly with temperature. Small Eₐ = fast, less temperature-sensitive. Catalysed reactions have small Eₐ.</div></section>
+
+<section class="sc" id="s7" style="--c:#d62828"><h2><i>7</i>✏️ Practice – Edexcel IAL style</h2><p class="story">Q1–Q2 are the textbook Checkpoint. Q3–Q8 are extra exam-style questions. Type an answer and check, or reveal the steps one at a time.</p><div id="qs"></div>
+<div class="key" style="background:#d4f5e4;color:#0b3d27">🌟 Finished? You can now explain WHY heat speeds reactions, calculate Eₐ two ways and read any profile. Go and get that grade!</div></section></div>
+<script>
+const $=s=>document.querySelector(s),V=id=>+$("#"+id).value,F=()=>getComputedStyle(document.body).color;
+const sp={"-":"⁻","0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹"},fm=n=>{const[m,e]=n.toExponential(1).split("e");return m+"×10"+[...String(+e)].map(c=>sp[c]).join("")};
+const S=[["🏔️","The hill"],["🔥","Heating"],["🧩","Arrhenius"],["📉","Straight line"],["🗺️","Profiles"],["🧪","SN1 vs SN2"],["✏️","Practice"]],C=["#e6007e","#f47321","#2b5aa8","#1aa37a","#8e44ad","#d62828","#d62828"];
+$("#nav").innerHTML=S.map((s,i)=>`<button style="--c:${C[i]}" onclick="document.getElementById('s${i+1}').scrollIntoView({behavior:'smooth'})">${i+1}. ${s[0]} ${s[1]}</button>`).join("");
+let mech=2;
+function ax(g,f,W,H){g.strokeStyle=f;g.lineWidth=1;g.beginPath();g.moveTo(40,10);g.lineTo(40,H-30);g.lineTo(W-10,H-30);g.stroke();g.lineWidth=2.5}
+function d2(g,t,f,W,H){const T=V("sT"),E=V("sE"),s=.6+(T-250)/350,Ea=1+(E-20)/80*3,X=e=>40+e/6*(W-60),Y=v=>H-30-v*280,Fn=e=>e*Math.exp(-e/s)/(s*s);ax(g,f,W,H);g.strokeStyle="#f47321";g.beginPath();for(let i=0;i<=120;i++)g[i?"lineTo":"moveTo"](X(i*.05),Y(Fn(i*.05)));g.stroke();g.fillStyle="#f4732188";g.beginPath();g.moveTo(X(Ea),Y(0));for(let e=Ea;e<=6;e+=.05)g.lineTo(X(e),Y(Fn(e)));g.lineTo(X(6),Y(0));g.fill();g.strokeStyle=f;g.setLineDash([5,4]);g.lineWidth=1;g.beginPath();g.moveTo(X(Ea),Y(0));g.lineTo(X(Ea),20);g.stroke();g.setLineDash([]);g.lineWidth=2.5;g.fillStyle=f;g.font="13px system-ui";g.fillText("Eₐ",X(Ea)+4,28);g.fillText("molecular energy →",W-130,H-10);for(let i=0;i<14;i++){const e=(i*.43+t*.8)%6,y=Y(Fn(e))-10-6*Math.sin(t*4+i);g.fillStyle=e>=Ea?"#d62828":f;g.beginPath();g.arc(X(e),y,4,0,7);g.fill()}
+const x=Math.exp(-E*1000/(8.31*T));$("#o2").textContent="Real fraction with E ≥ Eₐ = e^(−Eₐ/RT) = "+fm(x)+" (1 in "+fm(1/x)+") · schematic curve, not to scale"}
+function d3(){const T=V("aT"),E=V("aE")*1e3,x=Math.exp(-E/(8.31*T)),x2=Math.exp(-E/(8.31*(T+10)));$("#o3").innerHTML="e<sup>−Eₐ/RT</sup> = "+fm(x)+" → 1 in "+fm(1/x)+" collisions reacts.<br>Raise T by just 10 K → k × "+(x2/x).toFixed(2)+(x2/x>1.9?" (≈ doubles!)":"")}
+function d4(g,t,f,W,H){const X=x=>50+(x-.0029)/.0005*(W-80),Y=y=>H-35-(y+5.5)/2.5*(H-55),P=[[.00333,-5.27],[.00323,-4.79],[.00313,-4.36],[.00303,-3.91],[.00294,-3.5]],n=Math.min(5,Math.floor((t%12)/.7));g.strokeStyle=f;g.lineWidth=1;g.beginPath();g.moveTo(50,10);g.lineTo(50,H-35);g.lineTo(W-10,H-35);g.stroke();g.fillStyle=f;g.font="12px system-ui";[.0029,.0031,.0033].forEach(x=>g.fillText(x,X(x)-14,H-18));[-5,-4].forEach(y=>g.fillText(y,12,Y(y)+4));g.fillText("1/T (K⁻¹)",W-80,H-4);g.fillText("ln k",8,16);g.lineWidth=2.5;if(n>=5){g.strokeStyle="#1aa37a";g.beginPath();g.moveTo(X(.00338),Y(-5.27-4538*.00005));g.lineTo(X(.0029),Y(-3.5+4538*.00004));g.stroke();if($("#tri").checked){g.strokeStyle="#d62828";g.setLineDash([5,4]);g.beginPath();g.moveTo(X(.00333),Y(-5.27));g.lineTo(X(.00294),Y(-5.27));g.lineTo(X(.00294),Y(-3.5));g.stroke();g.setLineDash([]);g.fillStyle="#d62828";g.fillText("Δx = −0.00039",X(.0031),Y(-5.27)-6);g.fillText("Δy = 1.77",X(.00294)-72,Y(-4.4))}}P.slice(0,n).forEach(p=>{g.fillStyle="#1d2433";g.beginPath();g.arc(X(p[0]),Y(p[1]),6,0,7);g.fill()})}
+function d5(g,t,f,W,H){const sg=x=>1/(1+Math.exp(-x)),E=mech==2?u=>-25*sg(14*(u-.5))+90*Math.exp(-Math.pow((u-.5)/.14,2)):u=>35*sg(30*(u-.2))-60*sg(30*(u-.8))+85*Math.exp(-Math.pow((u-.2)/.07,2))+55*Math.exp(-Math.pow((u-.8)/.07,2)),Y=u=>H-70-E(u)*1.2,X=u=>20+u*(W-40),u0=(t/5)%1;g.strokeStyle="#8e44ad";g.beginPath();for(let i=0;i<=200;i++)g[i?"lineTo":"moveTo"](X(i/200),Y(i/200));g.stroke();g.fillStyle="#8e44ad";g.beginPath();g.arc(X(u0),Y(u0)-8,8,0,7);g.fill();g.fillStyle=f;g.font="13px system-ui";g.fillText("↑ energy      progress of reaction →",24,16);if(mech==2){g.fillText("transition state (max) [HO···R···Hal]⁻",X(.5)-100,Y(.5)-10);g.fillText("RHal + OH⁻",X(0),Y(0)+20);g.fillText("ROH + Hal⁻",X(.78),Y(1)+20)}else{g.fillText("TS 1 (RDS)",X(.2)-20,Y(.2)-10);g.fillText("TS 2",X(.8)-12,Y(.8)-10);g.fillText("intermediate R₃C⁺ (min)",X(.5)-70,Y(.5)+22);g.fillText("R₃CHal + OH⁻",X(0),Y(0)+20);g.fillText("R₃COH + Hal⁻",X(.76),Y(1)+20)}$("#o5").textContent=mech==2?"SN2: one step, one maximum, NO intermediate. rate = k[RX][OH⁻]":"SN1: two steps, an intermediate valley between two humps. Eₐ(1) > Eₐ(2). rate = k[R₃CCl]"}
+function pk6(i){const d=[[20,100,"Mostly SN2 – little crowding, so the 5-group transition state forms easily. Unstable 1° carbocation → SN1 slow. rate = k[RX][OH⁻]"],[50,50,"A mixture of SN1 and SN2."],[100,10,"Mostly SN1 – very stable 3° carbocation; crowding blocks SN2. rate = k[RX]"]][i];$("#o6").innerHTML=`<div class="bar" style="width:${d[0]}%;background:#2b5aa8;min-width:90px">SN1 ${d[0]}</div><div class="bar" style="width:${d[1]}%;background:#d62828;min-width:90px">SN2 ${d[1]}</div><p class="out">${d[2]}</p>`}pk6(0);
+function loop(t){t/=1e3;const f=F();[["c2",d2],["c4",d4],["c5",d5]].forEach(([id,fn])=>{const g=$("#"+id).getContext("2d");g.clearRect(0,0,640,230);g.lineWidth=2.5;fn(g,t,f,640,230)});d3();requestAnimationFrame(loop)}
+const Qs=[
+{t:"Checkpoint 1",q:"Use the Arrhenius equation to explain why an increase in temperature results in an increase in the rate of reaction.",h:"Follow T through the equation.",s:["k = Ae^(−Eₐ/RT).","T increases → Eₐ/RT decreases, so the exponent −Eₐ/RT is less negative.","So e^(−Eₐ/RT) increases and therefore k increases.","e^(−Eₐ/RT) is the fraction of collisions with energy ≥ Eₐ, so more collisions succeed and the rate rises."]},
+{t:"Checkpoint 2",k:"num",q:"k increases from 10.0 s⁻¹ to 100.0 s⁻¹ when T rises from 300 K to 400 K. Calculate Eₐ. [R = 8.31 J mol⁻¹ K⁻¹]",a:23,tol:.03,u:"kJ mol⁻¹",h:"Subtract the two ln k equations – ln A cancels.",s:["ln k₂ − ln k₁ = −(Eₐ/R)(1/T₂ − 1/T₁)","ln(100/10) = 2.303; 1/300 − 1/400 = 8.33×10⁻⁴ K⁻¹","Eₐ = 2.303 × 8.31 ÷ 8.33×10⁻⁴ ≈ 22 960 J mol⁻¹","Eₐ ≈ 23.0 kJ mol⁻¹"]},
+{t:"Extra",k:"num",q:"A reaction has Eₐ = 50.0 kJ mol⁻¹ and k = 2.00×10⁻³ s⁻¹ at 298 K. Find k at 308 K in units of 10⁻³ s⁻¹.",a:3.85,tol:.03,u:"×10⁻³ s⁻¹",h:"ln(k₂/k₁) = (Eₐ/R)(1/T₁ − 1/T₂)",s:["1/298 − 1/308 = 1.09×10⁻⁴ K⁻¹","ln(k₂/k₁) = (50 000 ÷ 8.31) × 1.09×10⁻⁴ = 0.656","k₂/k₁ = e^0.656 = 1.93","k₂ = 2.00×10⁻³ × 1.93 = 3.85×10⁻³ s⁻¹"]},
+{t:"Extra",k:"num",q:"A graph of ln k against 1/T is a straight line of gradient −5200 K. Calculate Eₐ.",a:43.2,tol:.02,u:"kJ mol⁻¹",h:"gradient = −Eₐ/R",s:["−Eₐ/R = −5200 K","Eₐ = 5200 × 8.31 = 43 212 J mol⁻¹","Eₐ = +43.2 kJ mol⁻¹ (answer must be positive; convert to kJ)"]},
+{t:"Extra",k:"mcq",q:"Which statement about the rate constant, k, is correct?",o:["k increases when the concentration of a reactant increases","k changes when the temperature changes or a catalyst is added","k has the same value at all temperatures","k always has units mol dm⁻³ s⁻¹"],a:1,e:"k depends on temperature (and catalyst, via lower Eₐ), not on concentration. Its units depend on the overall order."},
+{t:"Extra",k:"mcq",q:"Temperature rises from 300 K to 310 K for reaction X (Eₐ = 20 kJ mol⁻¹) and reaction Y (Eₐ = 80 kJ mol⁻¹). Which statement is correct?",o:["X rate increases more","Y rate increases more","Both increase by the same factor","Neither increases"],a:1,e:"Large Eₐ → rate is much more temperature-sensitive (e^(−Eₐ/RT) changes by a bigger factor)."},
+{t:"Extra",k:"mcq",q:"For the SN1 hydrolysis of a tertiary halogenoalkane, the reaction profile shows…",o:["one transition state and no intermediate","two transition states and one intermediate, with Eₐ(1) > Eₐ(2)","two intermediates and one transition state","one transition state and Eₐ(1) < Eₐ(2)"],a:1,e:"Step 1 (ionisation) is rate-determining so has the higher hump; the carbocation sits in the valley between the two transition states."},
+{t:"Extra (6 marks)",q:"Explain, using the Maxwell–Boltzmann distribution, why a 10 K rise in temperature can double the rate of reaction.",h:"Think area, peak, tail.",s:["Both curves enclose the same area (same number of molecules).","At higher T the peak is lower and shifts right; the curve flattens.","The area beyond Eₐ increases significantly (exponentially, e^(−Eₐ/RT)).","So a greater fraction of collisions are successful and k increases.","More frequent collisions has only a minor effect.","The activation energy itself does not change."]}];
+const dn=new Set();const up=()=>$("#pg").textContent=dn.size+" / "+Qs.length;
+$("#qs").innerHTML=Qs.map((q,i)=>`<div class="q" id="q${i}"><b>Q${i+1} · ${q.t}.</b> ${q.q}`+(q.k=="mcq"?q.o.map((o,j)=>`<button class="o" onclick="pk(${i},${j},this)">${"ABCD"[j]}. ${o}</button>`).join(""):q.k=="num"?`<div><input id="n${i}" type="number" step="any"> ${q.u} <button class="b" onclick="ck(${i})">Check</button></div>`:"")+`<div class="fb" id="f${i}"></div>`+(q.k=="mcq"?"":q.s.map(x=>`<div class="st" hidden>➜ ${x}</div>`).join("")+`<button class="b" onclick="$('#f${i}').textContent='💭 ${q.h}'">Hint</button><button class="b" onclick="nx(${i},this)">Next step ▶</button>`)+"</div>").join("");
+function pk(i,j,b){const q=Qs[i];b.classList.add(j==q.a?"ok":"no");$("#f"+i).textContent=(j==q.a?"✔ Correct! ":"✘ Not quite. ")+q.e;if(j==q.a){dn.add(i);up()}}
+function ck(i){const q=Qs[i],v=+$("#n"+i).value;if(Math.abs(v-q.a)/q.a<=q.tol){$("#f"+i).textContent="✔ Correct! Eₐ/k value matches – see the working below.";document.querySelectorAll("#q"+i+" .st").forEach(s=>s.hidden=false);dn.add(i);up()}else $("#f"+i).textContent="✘ Not yet – check units (J vs kJ), 1/T values and signs, then try again or use the steps."}
+function nx(i,b){const h=[...document.querySelectorAll("#q"+i+" .st[hidden]")];if(h.length)h[0].hidden=false;if(h.length<=1){b.textContent="✔ Done";b.disabled=true;dn.add(i);up()}else b.textContent="Next step ▶ ("+(h.length-1)+" left)"}
+requestAnimationFrame(loop);
+</script></body></html>
